@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.143.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CyberSec HQ</title>
-  
-  <link rel="stylesheet" href="http://localhost:1313/css/custom.min.css">
+  <title>{{ .Site.Title }}</title>
+  {{ $styles := resources.Get "css/custom.css" | minify }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}">
 </head>
 <body>
   <main class="cyber-container">
     <div class="terminal-style">
       <pre><code class="language-bash" id="terminal-output"></code></pre>
-      <h1 class="glitch-text">Filiposki54</h1>
-      <p class="subtitle">Breaking things ethically since 2023</p>
+      <h1 class="glitch-text">{{ .Site.Params.author }}</h1>
+      <p class="subtitle">{{ .Site.Params.tagline }}</p>
       <div class="cyber-buttons">
         <a href="/posts/" class="cyber-button">/blog</a>
         <a href="/about/" class="cyber-button">/about</a>
@@ -23,7 +22,7 @@
   </main>
 
   <script>
-    
+    // Terminal typing animation
     const terminalText = [
       "$ whoami",
       "Ethical Hacker | CTF Player | Security Researcher",

@@ -1,8 +1,15 @@
-baseURL = 'https://filiposki54.github.io/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://filiposki54.github.io/"
+languageCode = "en-us"
+title = "CyberSec HQ"
 theme = "hugo-coder"
-publishDir = "public"
+
+[params]
+  author = "Filiposki54"
+  tagline = "Breaking things ethically since 2023"
+  info = "Ethical Hacker | OSCP | TryHackMe Top 1%"
+  keywords = "hacking, cybersecurity, CTF, penetration-testing"
+  hideCredentials = true
+  hideFooter = true
 
 [menu]
   [[menu.main]]
@@ -10,3 +17,13 @@ publishDir = "public"
     name = "Blog"
     url = "/posts/"
     weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
