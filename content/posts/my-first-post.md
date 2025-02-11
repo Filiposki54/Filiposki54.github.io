@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2025-02-11T17:28:46+01:00
 title = "testing post"
 description = ""
